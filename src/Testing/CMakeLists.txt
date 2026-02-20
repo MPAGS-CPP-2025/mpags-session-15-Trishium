@@ -63,3 +63,7 @@ add_test(NAME test-playfaircipher COMMAND testPlayfairCipher)
 add_executable(testVigenereCipher testVigenereCipher.cpp)
 target_link_libraries(testVigenereCipher PRIVATE GTest::gtest_main MPAGSCipher)
 add_test(NAME test-vigenerecipher COMMAND testVigenereCipher)
+
+add_executable(testCiphers testCiphers.cpp)
+target_link_libraries(testCiphers PRIVATE GTest::gtest_main MPAGSCipher)
+add_test(NAME test-ciphers COMMAND testCiphers)

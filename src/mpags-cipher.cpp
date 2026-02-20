@@ -5,6 +5,7 @@
 #include "ProcessCommandLine.hpp"
 #include "TransformChar.hpp"
 #include "VigenereCipher.hpp"
+#include "Cipher.hpp"
 
 #include <cctype>
 #include <fstream>
@@ -90,7 +91,7 @@ int main(int argc, char* argv[])
     }
 
     std::string outputText;
-
+    
     switch (settings.cipherType) {
         case CipherType::Caesar: {
             // Run the Caesar cipher (using the specified key and encrypt/decrypt flag) on the input text
@@ -109,6 +110,7 @@ int main(int argc, char* argv[])
             break;
         }
     }
+    
 
     // Output the encrypted/decrypted text to stdout/file
     if (!settings.outputFile.empty()) {
